@@ -35,6 +35,6 @@ class Bureaucrat {
 		int			input_grade;
 };
 
-std::ostream &	operator<<(std::ostream& output, Bureaucrat const &tobeFilled);
+std::ostream &	operator<<(std::ostream& output, Bureaucrat const &bureaucrat);
 
 #endif
