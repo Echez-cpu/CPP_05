@@ -1,4 +1,4 @@
-#include "../include/Bureaucrat.hpp"
+#include "../includes/Bureaucrat.hpp"
 
 int main() {
     Bureaucrat *Gabriel = NULL;
