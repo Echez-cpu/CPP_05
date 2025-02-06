@@ -3,9 +3,9 @@
 Form::Form(str name, int signGrade) : input_name(name), input_signed(false), input_signGrade(signGrade), input_executeGrade(signGrade - 1) {
 
 	if (signGrade < 1)
-		throw Bureaucrat::GradeTooHighException();
+		throw Form::GradeTooHighException();
 	else if (signGrade > 150)
-		throw Bureaucrat::GradeTooLowException();
+		throw From::GradeTooLowException();
 	std::cout << "[Constructor] Form parameterized constructor called." << std::endl;
 }
 
@@ -74,9 +74,9 @@ void			Form::beSigned(Bureaucrat &pupil) {
 }
 
 const char *	Form::GradeTooHighException::what() const throw() {
-	return ("The bureaucrat is too senior to do this.");
+	return ("The Form is too proud (higher than 1).");
 }
 
 const char *	Form::GradeTooLowException::what() const throw() {
-	return ("The bureaucrat don't have the ability to do this.");
+	return ("The Form (lower than 150) is forbidden");
 }
