@@ -74,5 +74,5 @@ void			Bureaucrat::signForm(str name, bool sign) {
 	if (sign)
 		std::cout << this->input_name << " signed " << name << "." << std::endl;
 	else
-		std::cout << this->input_name << " couldn't sign " << name << " because he doesn't have meet the requirements to do so." << std::endl;
+		std::cout << this->input_name << " couldn't sign " << name << " because he doesn't meet the requirements to do so." << std::endl;
 }
