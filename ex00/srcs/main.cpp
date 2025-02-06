@@ -1,7 +1,7 @@
 #include "../includes/Bureaucrat.hpp"
 
 int main() {
-    Bureaucrat *Gabriel = NULL;
+    Bureaucrat *Gabriel = NULL; // i am using pointers, i could also just do it on the heap
     Bureaucrat *Lucifer = NULL;
 
     try {
