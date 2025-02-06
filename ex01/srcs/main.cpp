@@ -23,34 +23,49 @@ int main() {
 
         std::cout << "\n===== Signing Forms =====" << std::endl;
 
-        // High-rank bureaucrat signs all forms
-        highRank.signForm(f1);
-        highRank.signForm(f2);
-        highRank.signForm(f3);
+        try {
+            f1.beSigned(highRank);
+            std::cout << "✔️ " << highRank.getName() << " signed " << f1.getName() << std::endl;
+        } catch (const std::exception& e) {
+            std::cerr << "❌ " << highRank.getName() << " couldn't sign " << f1.getName() << " because " << e.what() << std::endl;
+        }
 
+        try {
+            f2.beSigned(midRank);
+            std::cout << "✔️ " << midRank.getName() << " signed " << f2.getName() << std::endl;
+        } catch (const std::exception& e) {
+            std::cerr << "❌ " << midRank.getName() << " couldn't sign " << f2.getName() << " because " << e.what() << std::endl;
+        }
+
+        try {
+            f3.beSigned(lowRank);
+            std::cout << "✔️ " << lowRank.getName() << " signed " << f3.getName() << std::endl;
+        } catch (const std::exception& e) {
+            std::cerr << "❌ " << lowRank.getName() << " couldn't sign " << f3.getName() << " because " << e.what() << std::endl;
+        }
+
+        std::cout << "\n===== Form Status After Signing =====" << std::endl;
         std::cout << f1 << std::endl;
         std::cout << f2 << std::endl;
         std::cout << f3 << std::endl;
 
-        // Mid-rank bureaucrat tries to sign
-        midRank.signForm(f1);  // Should succeed (50 required, 50 provided)
-        midRank.signForm(f2);  // Should fail (1 required, 50 provided)
-
-        // Low-rank bureaucrat tries to sign
-        lowRank.signForm(f3);  // Should succeed (100 required, 100 provided)
-        lowRank.signForm(f1);  // Should fail (50 required, 100 provided)
-
         std::cout << "\n===== Exception Testing =====" << std::endl;
+
         try {
-            Form invalidForm("Impossible Form", 0);  // Invalid, should throw
+            Form invalidForm1("Impossible Form", 2);  // Invalid, should throw
+            invalidForm1.beSigned(midRank);
+
         } catch (const std::exception& e) {
-            std::cerr << "Caught exception: " << e.what() << '\n';
+            std::cerr << "❌ Exception caught: " << e.what() << '\n';
         }
 
         try {
             Form invalidForm("Unreachable Form", 151);  // Invalid, should throw
+
+            //invalidForm.beSigned(lowRank);
+
         } catch (const std::exception& e) {
-            std::cerr << "Caught exception: " << e.what() << '\n';
+            std::cerr << "❌ Exception caught: " << e.what() << '\n';
         }
 
     } catch (const std::exception& e) {
@@ -59,3 +74,5 @@ int main() {
 
     return 0;
 }
+
+
