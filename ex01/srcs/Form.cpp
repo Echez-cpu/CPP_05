@@ -1,6 +1,11 @@
 #include "../includes/Form.hpp"
 
 Form::Form(str name, int signGrade) : input_name(name), input_signed(false), input_signGrade(signGrade), input_executeGrade(signGrade - 1) {
+
+	if (signGrade < 1)
+		throw Bureaucrat::GradeTooHighException();
+	else if (signGrade > 150)
+		throw Bureaucrat::GradeTooLowException();
 	std::cout << "[Constructor] Form parameterized constructor called." << std::endl;
 }
 
