@@ -1,4 +1,4 @@
-#include "../include/Form.hpp"
+#include "../includes/Form.hpp"
 
 Form::Form(str name, int signGrade) : input_name(name), input_signed(false), input_signGrade(signGrade), input_executeGrade(signGrade - 1) {
 	std::cout << "[Constructor] Form parameterized constructor called." << std::endl;
