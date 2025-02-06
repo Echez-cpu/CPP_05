@@ -14,6 +14,9 @@ int main() {
         std::cerr << "Error: " << e.what() << '\n';
     }
 
+        if(Gabriel  == NULL) // incase i decide to initialize with an invalid rank
+            return(0);
+    
     // Test Bureaucrat copy constructor
     try {
         Lucifer = new Bureaucrat(*Gabriel);
