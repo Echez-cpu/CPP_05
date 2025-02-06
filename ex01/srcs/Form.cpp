@@ -78,5 +78,5 @@ const char *	Form::GradeTooHighException::what() const throw() {
 }
 
 const char *	Form::GradeTooLowException::what() const throw() {
-	return ("The Form (lower than 150) is forbidden");
+	return ("The Form (lower than 150) or (lower than Bureacrat) is forbidden");
 }
