@@ -5,7 +5,7 @@ Form::Form(str name, int signGrade) : input_name(name), input_signed(false), inp
 	if (signGrade < 1)
 		throw Form::GradeTooHighException();
 	else if (signGrade > 150)
-		throw From::GradeTooLowException();
+		throw Form::GradeTooLowException();
 	std::cout << "[Constructor] Form parameterized constructor called." << std::endl;
 }
 
