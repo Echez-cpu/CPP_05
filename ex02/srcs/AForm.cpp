@@ -1,23 +1,23 @@
-AForm::AForm(str name, int signGrade) : input_name(name), input_signed(false), input_signGrade(signGrade), input_executeGrade(signGrade - 1) {
+AForm::AForm(str name, int signGrade, int executeGrade) : input_name(name), input_signed(false), input_signGrade(signGrade), input_executeGrade(executeGrade) {
 
 	if (signGrade < 1)
 		throw AForm::GradeTooHighException();
 	else if (signGrade > 150)
 		throw AForm::GradeTooLowException();
-	std::cout << "[Constructor] Form parameterized constructor called." << std::endl;
+	std::cout << "[Constructor] AForm parameterized constructor called." << std::endl;
 }
 
 AForm::AForm() : input_name(""), input_signed(false), input_signGrade(150), input_executeGrade(150) {
-	std::cout << "[C] Form default constructor called." << std::endl;
+	std::cout << "[C] AForm default constructor called." << std::endl;
 }
 
 AForm::AForm(Form const &source) : input_name(source.getName()), input_signGrade(source.getSignGrade()), input_executeGrade(source.getExecuteGrade()) {
-	std::cout << "[Copy] Form copy constructor called." << std::endl;
+	std::cout << "[Copy] AForm copy constructor called." << std::endl;
 	*this = source;
 }
 
 AForm::~AForm() {
-	std::cout << "[Destructor] Form default destructor called." << std::endl;
+	std::cout << "[Destructor] AForm default destructor called." << std::endl;
 }
 
 AForm &	AForm::operator=(Form const &original_copy) {
