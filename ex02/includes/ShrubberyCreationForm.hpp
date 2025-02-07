@@ -17,7 +17,6 @@ class ShrubberyCreationForm : public AForm {
 
 		ShrubberyCreationForm &	operator=(ShrubberyCreationForm const &rSym);
 
-		void	beSigned(Bureaucrat & person);
 		void	execute(Bureaucrat & executor) const;
 	private:
 		str	input_target;
