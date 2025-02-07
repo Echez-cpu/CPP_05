@@ -12,10 +12,10 @@ typedef std::string str;
 class ShrubberyCreationForm : public AForm {
 	public:
 		ShrubberyCreationForm(str target);
-		ShrubberyCreationForm(ShrubberyCreationForm const &src);
+		ShrubberyCreationForm(ShrubberyCreationForm const &source);
 		~ShrubberyCreationForm();
 
-		ShrubberyCreationForm &	operator=(ShrubberyCreationForm const &rSym);
+		ShrubberyCreationForm &	operator=(ShrubberyCreationForm const &original_copy);
 
 		void	execute(Bureaucrat & executor) const;
 	private:
