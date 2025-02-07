@@ -1,5 +1,5 @@
 SRC= $(wildcard ./srcs/*.cpp)
-NAME= bureaucrat
+NAME= burt
 OBJ= $(SRC:.cpp=.o)
 
 all: $(NAME)
