@@ -22,21 +22,21 @@ PresidentialPardonForm &	PresidentialPardonForm::operator=(PresidentialPardonFor
 }
 
 std::ostream &	operator<<(std::ostream & output, PresidentialPardonForm const &pres) {
-	o << "Form name : " << rSym.getName() << std::endl;
-	o << "Signed : ";
-	if (rSym.getSigned())
-		o << "True" << std::endl;
+	output << "AForm name : " << pres.getName() << std::endl;
+	output << "Signed : ";
+	if (pres.getSigned())
+		output << "True" << std::endl;
 	else
-		o << "False" << std::endl;
-	o << "Need to be grade " << rSym.getSignGrade() << " to sign it, and grade " << rSym.getExecuteGrade() << " to execute it.";
-	return o;
+		output << "False" << std::endl;
+	output << "Need to be grade " << pres.getSignGrade() << " to sign it, and grade " << pres.getExecuteGrade() << " to execute it.";
+	return output;
 }
 
 
 void	PresidentialPardonForm::execute(Bureaucrat & executor) const {
 	executor.executeForm(*this);
-	if (this->_signed == true)
-		std::cout << this->_target.getName() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+	if (this->input_signed == true)
+		std::cout << this->input_target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 	else
-		std::cout << this->_name << " is not signed, can't execute." << std::endl;
+		std::cout << this->input_name << " is not signed, can't execute." << std::endl;
 }
