@@ -34,7 +34,7 @@ std::ostream &	operator<<(std::ostream & o, RobotomyRequestForm const &robo) {
 
 void	RobotomyRequestForm::execute(Bureaucrat & executor) const {
 	executor.executeForm(*this);
-	if (this->input_signed == true) {
+	if (getSigned() == true) {
 		std::cout << "*Some drilling noise*" << std::endl;
 		std::cout << "*Some drilling noise*" << std::endl;
 		std::cout << "*Some drilling noise*" << std::endl;
