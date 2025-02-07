@@ -15,7 +15,8 @@ RobotomyRequestForm::~RobotomyRequestForm() {
 
 RobotomyRequestForm &	RobotomyRequestForm::operator=(RobotomyRequestForm const &original_copy) {
 	if (this != &original_copy) {
-		this->input_target = original_copy.input_target;
+	AForm::operator=(original_copy);		
+	this->input_target = original_copy.input_target;
 	}
 	return *this;
 }
