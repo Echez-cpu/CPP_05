@@ -1,3 +1,5 @@
+#include "../includes/AForm.hpp"
+
 AForm::AForm(str name, int signGrade, int executeGrade) : input_name(name), input_signed(false), input_signGrade(signGrade), input_executeGrade(executeGrade) {
 
 	if (signGrade < 1)
