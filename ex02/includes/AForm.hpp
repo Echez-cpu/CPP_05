@@ -35,7 +35,7 @@ class AForm {
 			public:
 				virtual const char*	what() const throw();
 		};
-	protected:
+	private:                                           // should be protected but subject says should stay as private...
 		str const	input_name;
 		bool		input_signed;
 		int const	input_signGrade;
