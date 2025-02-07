@@ -16,7 +16,7 @@ PresidentialPardonForm::~PresidentialPardonForm() {
 
 PresidentialPardonForm &	PresidentialPardonForm::operator=(PresidentialPardonForm const &original_copy) {
 	if (this != &original_copy) {
-		AForm::operator=(rSym);
+		AForm::operator=(original_copy);
 		this->input_target = original_copy.input_target;
 	}
 	return *this;
