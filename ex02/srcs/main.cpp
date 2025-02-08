@@ -1,8 +1,9 @@
-#include "Bureaucrat.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
-#include <iostream>
+#include "../includes/Bureaucrat.hpp"
+#include "../includes/AForm.hpp"
+#include "../includes/PresidentialPardonForm.hpp"
+#include "../includes/ShrubberyCreationForm.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
+
 
 int main() {
     try {
