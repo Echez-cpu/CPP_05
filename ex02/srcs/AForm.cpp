@@ -13,7 +13,7 @@ AForm::AForm() : input_name(""), input_signed(false), input_signGrade(150), inpu
 	std::cout << "[C] AForm default constructor called." << std::endl;
 }
 
-AForm::AForm(Form const &source) : input_name(source.getName()), input_signGrade(source.getSignGrade()), input_executeGrade(source.getExecuteGrade()) {
+AForm::AForm(AForm const &source) : input_name(source.getName()), input_signGrade(source.getSignGrade()), input_executeGrade(source.getExecuteGrade()) {
 	std::cout << "[Copy] AForm copy constructor called." << std::endl;
 	*this = source;
 }
@@ -22,7 +22,7 @@ AForm::~AForm() {
 	std::cout << "[Destructor] AForm default destructor called." << std::endl;
 }
 
-AForm &	AForm::operator=(Form const &original_copy) {
+AForm &	AForm::operator=(AForm const &original_copy) {
 	if (this != &original_copy) {
 		this->input_signed = original_copy.getSigned();
 	}
@@ -36,7 +36,7 @@ std::ostream   &operator<<(std::ostream & output, AForm const &aF) {
 		output << "True" << std::endl;
 	else
 		output << "False" << std::endl;
-	output << "Need to be grade " << aF.getSignGrade() << " to sign it, and grade " << f.getExecuteGrade() << " to execute it.";
+	output << "Need to be grade " << aF.getSignGrade() << " to sign it, and grade " << aF.getExecuteGrade() << " to execute it.";
 	return output;
 }
 
@@ -49,7 +49,7 @@ bool	AForm::getSigned() const {
 	return this->input_signed;
 }
 
-int		Form::getSignGrade() const {
+int		AForm::getSignGrade() const {
 	return this->input_signGrade;
 }
 
