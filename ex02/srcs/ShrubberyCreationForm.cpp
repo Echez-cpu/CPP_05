@@ -22,24 +22,30 @@ ShrubberyCreationForm &	ShrubberyCreationForm::operator=(ShrubberyCreationForm c
 	return *this;
 }
 
-std::ostream &	operator<<(std::ostream & output, ShrubberyCreationForm const &rSym) {
-	o << "Form name : " << rSym.getName() << std::endl;
-	o << "Signed : ";
-	if (rSym.getSigned())
-		o << "True" << std::endl;
+std::ostream &	operator<<(std::ostream & output, ShrubberyCreationForm const &shru) {
+	output << "Form name : " << shru.getName() << std::endl;
+	output << "Signed : ";
+	if (shru.getSigned())
+		output << "True" << std::endl;
 	else
-		o << "False" << std::endl;
-	o << "Need to be grade " << rSym.getSignGrade() << " to sign it, and grade " << rSym.getExecuteGrade() << " to execute it.";
-	return o;
+		output << "False" << std::endl;
+	output << "Need to be grade " << shru.getSignGrade() << " to sign it, and grade " << shru.getExecuteGrade() << " to execute it.";
+	return output;
 }
 
 
 void	ShrubberyCreationForm::execute(Bureaucrat & executor) const {
-	str				outfile = this->input_target.getName() + "_shrubbery";
+	str				outfile = this->input_target + "_shrubbery";
 	std::ofstream	output(outfile.c_str());
+
+
+		if (!output) {
+      		   std::cerr << "Error: Could not create file " << outfile << std::endl;
+      		   return;
+    		}
 	
 	executor.executeForm(*this);
-	if (this->_signed == true) {
+	if (getSigned() == true) {
 		output << "       _-_" << std::endl;
 		output << "    /~~   ~~\\" << std::endl;
 		output << " /~~         ~~\\" << std::endl;
@@ -51,5 +57,5 @@ void	ShrubberyCreationForm::execute(Bureaucrat & executor) const {
 		output << "      // \\\\" << std::endl;
 	}
 	else
-		std::cout << this->_name << " is not signed, can't execute." << std::endl;
+		std::cout << getName() << " is not signed, can't execute." << std::endl;
 }
