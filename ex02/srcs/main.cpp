@@ -85,7 +85,7 @@ int main() {
 	AForm *			robot = new RobotomyRequestForm("mum");
 
 	try {
-		robot->beSigned(*Mum);
+		robot->beSigned(*mum);
 		shru->beSigned(*rat);
 		robot->execute(*mum);
 		shru->execute(*mum);
