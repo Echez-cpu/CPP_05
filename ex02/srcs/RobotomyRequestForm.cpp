@@ -21,7 +21,7 @@ RobotomyRequestForm &	RobotomyRequestForm::operator=(RobotomyRequestForm const &
 	return *this;
 }
 
-std::ostream &	operator<<(std::ostream & o, RobotomyRequestForm const &robo) {
+std::ostream &	operator<<(std::ostream & output, RobotomyRequestForm const &robo) {
 	output << "Form name : " << robo.getName() << std::endl;
 	output << "Signed : ";
 	if (robo.getSigned())
