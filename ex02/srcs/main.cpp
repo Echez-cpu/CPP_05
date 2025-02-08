@@ -78,17 +78,17 @@ int main() {
 
 
 /*int	main() {
-	Bureaucrat *	Donald = new Bureaucrat("Donald", 2);
-	Bureaucrat *	Joe = new Bureaucrat("Joe", 10);
-	Bureaucrat *	Miguel = new Bureaucrat("Miguel", 65);
-	AForm *			shru = new ShrubberyCreationForm("Joe");
-	AForm *			robot = new RobotomyRequestForm("Donald");
+	Bureaucrat *	mum = new Bureaucrat("mum", 2);
+	Bureaucrat *	rat = new Bureaucrat("rat", 10);
+	Bureaucrat *	Miki = new Bureaucrat("Miki", 65);
+	AForm *			shru = new ShrubberyCreationForm("rat");
+	AForm *			robot = new RobotomyRequestForm("mum");
 
 	try {
-		robot->beSigned(*Miguel);
-		shru->beSigned(*Joe);
-		robot->execute(*Donald);
-		shru->execute(*Donald);
+		robot->beSigned(*Mum);
+		shru->beSigned(*rat);
+		robot->execute(*mum);
+		shru->execute(*mum);
 	}
 	catch(const std::exception& e) {
 		std::cerr << e.what() << '\n';
@@ -99,8 +99,8 @@ int main() {
 
 	delete robot;
 	delete shru;
-	delete Miguel;
-	delete Joe;
-	delete Donald;
+	delete Miki;
+	delete rat;
+	delete mum;
 }*/
 
