@@ -17,18 +17,18 @@ int main() {
         PresidentialPardonForm pardon("Criminal");
 
         std::cout << "\n--- Signing Forms ---\n";
-        highRank.signForm(shrubbery);
-        midRank.signForm(robotomy);
-        highRank.signForm(pardon);
+        highRank.beSigned(shrubbery);
+        midRank.beSigned(robotomy);
+        highRank.beSigned(pardon);
 
         std::cout << "\n--- Executing Forms ---\n";
-        lowRank.executeForm(shrubbery); // Should fail due to low grade
-        highRank.executeForm(shrubbery); // Should create ASCII trees
+        shrubbery.execute(lowRank); // Should fail due to low grade
+        shrubbery.execute(highRank); // Should create ASCII trees
 
-        midRank.executeForm(robotomy); // Should succeed or fail randomly
+        robotomy.execute(midRank); // Should succeed or fail randomly
 
-        lowRank.executeForm(pardon); // Should fail due to low grade
-        highRank.executeForm(pardon); // Should succeed
+        pardon.execute(lowRank); // Should fail due to low grade
+        pardon.execute(highRank); // Should succeed
     }
     catch (std::exception &e) {
         std::cerr << "Exception: " << e.what() << std::endl;
