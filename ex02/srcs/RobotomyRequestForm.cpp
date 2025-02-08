@@ -44,6 +44,6 @@ void	RobotomyRequestForm::execute(Bureaucrat & executor) const {
 		if (nb % 2 == 0)
 			std::cout << this->input_target << " has been robotomized." << std::endl;
 		else
-			std::cout << this->input_target << " failed." << std::endl;
+			std::cout << this->input_target << " failed, so didn't robotomized." << std::endl;
 	}
 }
