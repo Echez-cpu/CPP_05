@@ -18,9 +18,9 @@ int main() {
         PresidentialPardonForm pardon("Criminal");
 
         std::cout << "\n--- Signing Forms ---\n";
-        highRank.beSigned(shrubbery);
-        midRank.beSigned(robotomy);
-        highRank.beSigned(pardon);
+        shrubbery.beSigned(highRank);
+        robotomy.beSigned(midRank);
+        pardon.beSigned(highRank);
 
         std::cout << "\n--- Executing Forms ---\n";
         shrubbery.execute(lowRank); // Should fail due to low grade
