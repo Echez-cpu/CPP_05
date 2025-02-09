@@ -5,7 +5,7 @@ Intern::Intern() {
 }
 
 Intern::Intern(Intern const &source) {
-	std::cout << "[Default] Intern copy constructor called." << std::endl;
+	std::cout << "[copy] Intern copy constructor called." << std::endl;
 	*this = source;
 }
 
