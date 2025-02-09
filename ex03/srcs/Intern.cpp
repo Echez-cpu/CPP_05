@@ -21,7 +21,11 @@ Intern &	Intern::operator=(Intern const &original_copy) {
 
 AForm *			Intern::makeForm(str name, str target) const {
 	AForm *	form = NULL;
-	AForm *	(Intern::*funcPtr[3])(str target) const = {&Intern::makePresidential, &Intern::makeRobotomy, &Intern::makeShrubbery};
+	AForm *	(Intern::*funcPtr[3])(str target) const = {
+	&Intern::makePresidential, 
+	&Intern::makeRobotomy, 
+	&Intern::makeShrubbery
+};
 	str		forms[3] = {"presidential pardon", "robotomy request", "shrubbery creation"};
 	int		i = 0;
 
