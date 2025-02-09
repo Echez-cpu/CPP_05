@@ -28,7 +28,7 @@ int main() {
 		std::cout << "\n--- Executing Forms ---\n";
 		pardonForm->execute(manager);
 		robotForm->execute(assistant);
-		shrubForm->executeForm(manager);
+		shrubForm->execute(manager);
 
 		std::cout << "\n--- Attempting to Create an Invalid Form ---\n";
 		try {
