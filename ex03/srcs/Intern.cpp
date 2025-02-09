@@ -28,7 +28,7 @@ AForm *			Intern::makeForm(str name, str target) const {
 	while (i < 3) {
 		if (forms[i] == name) {
 			form = (this->*funcPtr[i])(target);
-			std::cout << "Intern create " << name << " form." << std::endl;
+			std::cout << "Intern creates " << name << " form." << std::endl;
 			return form;
 		}
     i++;
