@@ -38,6 +38,10 @@ void	RobotomyRequestForm::execute(Bureaucrat & executor) const {
 		std::cout << "*Some drilling noise*" << std::endl;
 		std::cout << "*Some drilling noise*" << std::endl;
 		std::cout << "*Some drilling noise*" << std::endl;
+		std::cout << "*Some drilling noise*" << std::endl;
+		std::cout << "*Some drilling noise*" << std::endl;
+		std::cout << "*Some drilling noise*" << std::endl;
+		std::cout << "*Some drilling noise*" << std::endl;
 		
 		srand(time(NULL));   // call this in the main function
 		int	nb = rand() % 100 + 1;
