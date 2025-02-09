@@ -26,9 +26,9 @@ int main() {
 		shrubForm->beSigned(manager);
 
 		std::cout << "\n--- Executing Forms ---\n";
-		manager.executeForm(*pardonForm);
-		assistant.executeForm(*robotForm);
-		manager.executeForm(*shrubForm);
+		pardonForm->execute(manager);
+		robotForm->execute(assistant);
+		shrubForm->executeForm(manager);
 
 		std::cout << "\n--- Attempting to Create an Invalid Form ---\n";
 		try {
