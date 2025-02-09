@@ -33,6 +33,8 @@ std::ostream &	operator<<(std::ostream & output, RobotomyRequestForm const &robo
 }
 
 void	RobotomyRequestForm::execute(Bureaucrat & executor) const {
+
+	// remember to check if signed before trying to execute
 	executor.executeForm(*this);
 	if (getSigned() == true) {
 		std::cout << "*Some drilling noise*" << std::endl;
