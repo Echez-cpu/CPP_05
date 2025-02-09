@@ -43,7 +43,8 @@ void	ShrubberyCreationForm::execute(Bureaucrat & executor) const {
       		   std::cerr << "Error: Could not create file " << outfile << std::endl;
       		   return;
     		}
-	
+
+	// remember to check if signed before trying to execute	
 	executor.executeForm(*this);
 	if (getSigned() == true) {
 		output << "       _-_" << std::endl;
