@@ -21,9 +21,9 @@ int main() {
 		AForm *shrubForm = intern.makeForm("shrubbery creation", "Garden");
 
 		std::cout << "\n--- Signing Forms ---\n";
-		manager.signForm(*pardonForm);
-		assistant.signForm(*robotForm);
-		manager.signForm(*shrubForm);
+		pardonForm.beSigned(manager);
+		assistant.beSigned(*robotForm);
+		manager.beSigned(*shrubForm);
 
 		std::cout << "\n--- Executing Forms ---\n";
 		manager.executeForm(*pardonForm);
