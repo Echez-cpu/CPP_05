@@ -13,7 +13,7 @@ int main() {
 
 		std::cout << "\n--- Creating Bureaucrats ---\n";
 		Bureaucrat manager("Alice", 1);
-		Bureaucrat assistant("Bob", 50);
+		Bureaucrat assistant("Bob", 25);
 
 		std::cout << "\n--- Intern Creating Forms ---\n";
 		AForm *pardonForm = intern.makeForm("presidential pardon", "Criminal");
