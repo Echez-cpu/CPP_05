@@ -35,7 +35,7 @@ AForm *			Intern::makeForm(str name, str target) const {
 	}
 	std::cout << "Intern can't create " << name << " form : Invalid form name." << std::endl;
 	throw Intern::WrongNameException();
-	return NULL;
+	// return NULL; doing tjis would be redundant...
 }
 
 AForm *			Intern::makePresidential(str target) const {
