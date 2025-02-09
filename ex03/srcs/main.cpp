@@ -22,12 +22,22 @@ int main() {
 
 		std::cout << "\n--- Signing Forms ---\n";
 		pardonForm->beSigned(manager);
-		robotForm->beSigned(assistant);
+
+		try {
+			robotForm->beSigned(assistant);
+		} catch (const std::exception &e) {
+			std::cerr << "Error signing robotomy form: " << e.what() << std::endl;
+		}
 		shrubForm->beSigned(manager);
 
 		std::cout << "\n--- Executing Forms ---\n";
 		pardonForm->execute(manager);
-		robotForm->execute(assistant);
+
+		try {
+			robotForm->execute(assistant);
+		} catch (const std::exception &e) {
+			std::cerr << "Error signing robotomy form: " << e.what() << std::endl;
+		}
 		shrubForm->execute(manager);
 
 		std::cout << "\n--- Attempting to Create an Invalid Form ---\n";
