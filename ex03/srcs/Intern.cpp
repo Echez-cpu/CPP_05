@@ -1,4 +1,4 @@
-#include "../include/Intern.hpp"
+#include "../includes/Intern.hpp"
 
 Intern::Intern() {
 	std::cout << "[Constructor] Intern default constructor called." << std::endl;
