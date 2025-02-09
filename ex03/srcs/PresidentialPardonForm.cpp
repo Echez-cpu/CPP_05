@@ -35,6 +35,7 @@ std::ostream &	operator<<(std::ostream & output, PresidentialPardonForm const &p
 
 
 void	PresidentialPardonForm::execute(Bureaucrat & executor) const {
+	// remember to check if signed before trying to execute
 	executor.executeForm(*this);
 	if (getSigned() == true)
 		std::cout << this->input_target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
