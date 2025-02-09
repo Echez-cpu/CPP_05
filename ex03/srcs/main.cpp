@@ -1,9 +1,9 @@
-#include "../include/Bureaucrat.hpp"
-#include "../include/AForm.hpp"
-#include "../include/PresidentialPardonForm.hpp"
-#include "../include/ShrubberyCreationForm.hpp"
-#include "../include/RobotomyRequestForm.hpp"
-#include "../include/Intern.hpp"
+#include "../includes/Bureaucrat.hpp"
+#include "../includes/AForm.hpp"
+#include "../includes/PresidentialPardonForm.hpp"
+#include "../includes/ShrubberyCreationForm.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
+#include "../includes/Intern.hpp"
 
 
 int main() {
