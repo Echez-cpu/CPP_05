@@ -1,6 +1,6 @@
 #include "../includes/ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(str target) : AForm::AForm("Ascii things", 145, 137), input_target(target) {
+ShrubberyCreationForm::ShrubberyCreationForm(str target) : AForm::AForm("shrubbery Ascii things", 145, 137), input_target(target) {
 	std::cout << "[Constructor] ShrubberyCreationForm default constructor called." << std::endl;
 }
 
